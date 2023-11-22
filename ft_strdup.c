@@ -6,21 +6,34 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:21:18 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/21 20:47:24 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/22 14:25:36 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+/*	This function allocates enough memory for a copy of the string 's1'.	*/
+/*	This function duplicates s1 & returns a pointer to it.	*/
+/*	The duplicate is s2. 	*/
+/*	In this function, the ft_strlen of typecasted s1 is calcuated & 
+to be used for memory allocation. 	*/
+/*	s2 is equated to the allocated memory (typecasting calloc too)	*/
+/*	+1 is added to the string length(ft_strlen)of s1 for the '\0'	*/
+/*	a condition was set to check if insufficienrt memory was allocated, 
+if true it returns a NULL.	*/
+/*	premade function ft_memcpy is used for the duplicate.	*/
 
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
-	size_t	str_s1_size;
+	size_t	s1_len;
 	char	*s2;
 
-	str_s1_size = ft_strlen(s1);
-	s2 = malloc (str_s1_size + 1);
+	s1_len = ft_strlen((char *)s1);
+	s2 = (char *) ft_calloc ((s1_len + 1), sizeof(char));
 
 	if (!s2)
 		return (NULL);
-	return (ft_memcpy(s2, s1, str_s1_size +1));
+	ft_memcpy(s2, s1, s1_len);
+	return (s2);
 }
