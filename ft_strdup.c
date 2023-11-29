@@ -6,10 +6,9 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:21:18 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/22 14:25:36 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/29 16:22:40 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 /*	This function allocates enough memory for a copy of the string 's1'.	*/
 /*	This function duplicates s1 & returns a pointer to it.	*/
@@ -31,7 +30,6 @@ char	*ft_strdup(const char *s1)
 
 	s1_len = ft_strlen((char *)s1);
 	s2 = (char *) ft_calloc ((s1_len + 1), sizeof(char));
-
 	if (!s2)
 		return (NULL);
 	ft_memcpy(s2, s1, s1_len);

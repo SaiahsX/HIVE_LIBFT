@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 12:29:20 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/29 16:26:13 by oadewumi         ###   ########.fr       */
+/*   Created: 2023/11/28 21:05:02 by oadewumi          #+#    #+#             */
+/*   Updated: 2023/11/29 16:14:21 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* This function checks the character returned to'int c' as an ASCII character
-then it converts the charcter to uppercase if its a lowercase */
-/* This function imitates the standard C library funtion 'toupper'*/
+#include "libft.h"
 
-int	ft_toupper(int c)
-{
-	if (c >= 97 && c <= 122)
-	{
-		c = c -32;
-	}
-	return (c);
-}
+// char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+// {
+	
+// }

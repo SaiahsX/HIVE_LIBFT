@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 14:36:43 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/22 19:21:11 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/29 16:25:48 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	source_len = ft_strlen((char *) s);
-
 	if (start > source_len)
 		return (0);
 	if (len > (source_len - start))
 		len = source_len - start;
-
 	subs_string = (char *)malloc ((len +1) * sizeof (char));
 	if (!subs_string || !s)
 		return (NULL);

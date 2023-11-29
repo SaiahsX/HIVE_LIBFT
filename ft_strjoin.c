@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 19:32:23 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/23 14:05:01 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/29 16:23:28 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	dest_len = ft_strlen(dest);
 	source_len = ft_strlen(source);
-
 	result = (char *) malloc ((dest_len + source_len + 1) * sizeof(char));
 	if (!result)
 		return (NULL);

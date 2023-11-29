@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 19:31:21 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/21 20:30:49 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/29 16:19:34 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,12 @@ void	*ft_calloc(size_t count, size_t size)
 	max_num = SIZE_MAX;
 	if (!count || !size)
 		return (NULL);
-
 	byte_size = count * size;
-
 	if (max_num / count < size)
 		return (NULL);
-
 	pntr = malloc(byte_size);
 	if (pntr == NULL)
 		return (NULL);
-
 	ft_bzero(pntr, (byte_size));
 	return (pntr);
 }
