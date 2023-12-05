@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:30:22 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/28 21:06:17 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/12/04 16:18:36 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,14 @@
 # include <stdlib.h>
 
 # define FT_LONG_MAX 9223372036854775807L
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	*ft_memmove(void *dst, const void *src, size_t len);
@@ -42,6 +50,8 @@ int		ft_toupper(int c);
 int		ft_isascii(int a);
 int		ft_isprint(int p);
 
+t_list	*ft_lstnew(void *content);
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
@@ -52,5 +62,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strdup(const char *s1);
+char	*ft_itoa(int n);
 
 #endif
