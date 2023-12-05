@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 18:28:55 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/29 16:49:37 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/12/04 19:37:22 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ we copy each substring into the allocated memory space in spit_res. We use
 the index 'J' to loop through the substrings and important to free the 
 allocated memories if there is a failled memory allocation. Then loop
 through index 'J' only after this.	*/
-/*	The split result at the address 'j' will be null terminated. and 
-returned as our needed output	*/
+/*	The each split result (substings) at the address 'j' is null terminated. 
+and returned as our needed output	*/
 
 #include "libft.h"
 
@@ -70,10 +70,12 @@ static char	**ft_filling_substr(char **split_res, char const *s, char c)
 	size_t	start;
 	size_t	len;
 	size_t	j;
+	size_t	poll;
 
 	start = 0;
 	j = 0;
-	while (s[start] != '\0' && j < (ft_substr_poll(s, c)))
+	poll = ft_substr_poll(s, c);
+	while (s[start] != '\0' && j < poll)
 	{
 		while (s[start] == c && s[start] != '\0')
 			start++;
@@ -94,7 +96,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**split_res;
 
-	split_res = (char **)malloc((ft_substr_poll(s, c) + 1) * sizeof(char *));
+	split_res = (char **)ft_calloc((ft_substr_poll(s, c) + 1), sizeof(char *));
 	if (!split_res)
 		return (0);
 	split_res = ft_filling_substr(split_res, s, c);
