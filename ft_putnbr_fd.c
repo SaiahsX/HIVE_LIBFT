@@ -16,6 +16,7 @@ character and print(write) it out.	*/
 /*	The preivious statment was no longer true and had to be replaced by
 a new variable declaration, long nb, which will take care of the long min
 long max edge cases or prevent an overflow.	*/
+/*	Hence, every int n variable replaced with nb reflecting long variable	*/
 /*	Else, This function takes care of every value 
 up to max int (2147483647).	*/
 /*	If there is a negative value, the '-' sign is printed out exclusively
