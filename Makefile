@@ -36,7 +36,7 @@ SRCS     =   ft_atoi.c \
 OFILES    =    $(SRCS:.c=.o)
 
 CC        =    cc
-RM        =    -rm -f
+RM        =    -rm -rf
 CFLAGS    =    -Wall -Wextra -Werror
 
 NAME    =    libft.a
@@ -44,16 +44,16 @@ NAME    =    libft.a
 all:        $(NAME)
 
 $(NAME):    $(OFILES)
-        ar -rcs $(NAME) $(OFILES)
+		ar -rcs $(NAME) $(OFILES)
 
 %.o: %.c
-    $(CC) -c $(CFLAGS) $?
+	$(CC) -c $(CFLAGS) $?
 
 clean:
-    $(RM) $(OFILES)
+	$(RM) $(OFILES)
 
 fclean: clean
-    $(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean $(NAME)
 
