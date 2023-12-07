@@ -18,9 +18,14 @@ the allocated memory.	*/
 /*	To start, a void pointer to a variable 'pntr' is declared	*/
 /*	This variable will be used to calculate malloc	*/
 /*	In this function, some protective conditions are specified:
-1.	check if the count or size is zero and return a NULL.
-2.	check if the fraction SIZE_MAX/count is less than size, return NULL.
-3.	After you have initialized the void variable 'pntr'. 
+1.	check if the count * size exceed max value and return a NULL.
+	.	'max_num / count' calculates the maximum number of elements that could 
+	be allocated without overflowing the size_t data type.
+	.	'max_num / count < size' checks whether the calculated maximum number 
+	of elements, when multiplied by size, would result in an overflow.
+	.	count && ... ensures that both count is non-zero and the potential 
+	overflow condition is checked.
+2.	After have memory allocated to 'pntr' the void variable 'pntr'. 
 Check if its a Null & return a NULL.	*/
 /*	To conclude this function, ft_bzero is used to 
 zero all allocated memory bytes.	*/
@@ -36,10 +41,8 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	max_num;
 
 	max_num = SIZE_MAX;
-	if (!count || !size)
-		return (NULL);
 	byte_size = count * size;
-	if (max_num / count < size)
+	if (count && (max_num / count) < size)
 		return (NULL);
 	pntr = malloc(byte_size);
 	if (pntr == NULL)
