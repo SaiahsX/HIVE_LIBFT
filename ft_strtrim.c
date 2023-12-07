@@ -31,15 +31,19 @@ pointer + 2 to cater for the the extra xter & '\0' due to some maths blah
 blah.	*/
 /*	The return value is the ft_strlcpy to copy from the pointer to the 
 current index start of the source upto the size specified in the malloc.	*/
+/*	Update: Changed the variabe type of start and en to long and 
+setting the condition if either s1 or set are null to return 0	*/
 
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*result;
-	size_t	start;
-	size_t	end;
+	long	start;
+	long	end;
 
+	if (!s1 || !set)
+		return (0);
 	start = 0;
 	end = ft_strlen((char *)s1) - 1;
 	while (s1[start] && ft_strchr(set, s1[start]))
