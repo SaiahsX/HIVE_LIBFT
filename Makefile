@@ -58,18 +58,25 @@ all:        $(NAME)
 $(NAME):    $(OFILES)
 		ar -rcs $(NAME) $(OFILES)
 
-bonus:  $(OFILES) $(BOFILES)
-		ar -rcs $(NAME) $(OFILES) $(BOFILES) 
+BONUS = .bonus
+
+bonus:  ${BONUS}
+
+${BONUS}:   $(OFILES) $(BOFILES)
+		ar -rcs $(NAME)  $(OFILES) $(BOFILES)
+		touch ${BONUS}
+
+${BOFILES}:     ${BONUS_SRCS}
+		cc	${CFLAGS}	-c ${BONUS_SRCS}	-I	libft.h
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
 
 clean:
 	$(RM) $(OFILES) $(BOFILES)
-
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean $(NAME)
 
-.PHONY: all clean fclean bonus
+.PHONY: all clean fclean re bonus
