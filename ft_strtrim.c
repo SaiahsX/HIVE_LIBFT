@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 15:57:00 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/29 16:25:21 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/12/07 15:48:14 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ pointer + 2 to cater for the the extra xter & '\0' due to some maths blah
 blah.	*/
 /*	The return value is the ft_strlcpy to copy from the pointer to the 
 current index start of the source upto the size specified in the malloc.	*/
-/*	Update: Changed the variabe type of start and en to long and 
+/*	Update: Changed the variable type of start and en to long and 
 setting the condition if either s1 or set are null to return 0	*/
 
 #include "libft.h"

@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 14:36:43 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/29 16:25:48 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/12/07 15:58:12 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ while len is the max lent of the substring	*/
 	is allocated, if not return NULL.	*/
 /*	The substring is calculated by iterating through the source while
 using the start index + source index. Then null terminate the substring.	*/
-/*	Update: step 1 return is faulty due to inability to free unallocated memory.
+/*	Update: step 1 return is fauty due to inability to free unallocated memory.
 Thus, we use the calloc function to allocate and free the size of an empty
 string.	*/
 

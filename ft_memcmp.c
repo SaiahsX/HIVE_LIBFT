@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:23:56 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/20 18:36:52 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/12/07 13:31:19 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@ Both strings are assumed to be n bytes long*/
 else, it returns the difference in ascii values of the non identical strings*/
 /* The 2 strings are treated as unsigned char as per the manual and the 
 is also compensatimg for null strings values which returns a null*/
-/*	removed the condition (alpha[i] != '\0' || beta[i] != '\0')
-from the while loop because the program should be able 
-to compare empty string.	*/
+/*	removed the condition (alpha[i] != '\0' || beta[i] != '\0') from the 
+while loop because the program should be able to compare empty string.	*/
 /* This function imitates the behaviour of the standard C library
 function 'memcmp'*/
 
