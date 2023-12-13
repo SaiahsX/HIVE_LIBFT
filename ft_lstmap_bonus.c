@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 16:56:49 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/12/13 11:36:45 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/12/13 12:11:10 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst)
 	{
 		phony_content = f(lst->content);
+		if (!phony_content)
+		{
+			ft_lstclear(&support_node, del);
+			return (0);
+		}
 		new_node = ft_lstnew(phony_content);
 		if (!new_node)
 		{
-			(del)(phony_content);
 			ft_lstclear(&support_node, del);
 			return (0);
 		}
