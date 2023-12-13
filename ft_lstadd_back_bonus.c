@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oadewumi <oadewumi@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:18:18 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/12/12 17:43:00 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/12/13 11:37:42 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -73,7 +73,7 @@ ${BOFILES}:     ${BONUS_SRCS}
 	$(CC) -c $(CFLAGS) $?
 
 clean:
-	$(RM) $(OFILES) $(BOFILES)
+	$(RM) $(OFILES) $(BOFILES) $(BONUS)
 fclean: clean
 	$(RM) $(NAME)
 

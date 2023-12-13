@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oadewumi <oadewumi@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:00:45 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/12/12 19:27:37 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/12/13 11:38:03 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

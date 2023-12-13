@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oadewumi <oadewumi@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 18:28:55 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/12/04 19:37:22 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/12/13 11:31:49 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static char	**ft_free_function(char **s)
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		free (s[i]);
 		i++;
